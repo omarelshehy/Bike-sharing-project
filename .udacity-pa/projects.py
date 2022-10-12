@@ -6,11 +6,12 @@ nanodegree = 'nd101'
 projects = ['first_neural_network']
 filenames = ['my_answers.py', 'Your_first_neural_network.ipynb']
 
+
 def submit(args):
+    # Do we prefer ipynb, html or both?
+    # sp.call(['jupyter', 'nbconvert', '--to', 'html', 'dlnd_image_classification.ipynb'])
 
-  # Do we prefer ipynb, html or both?
-  # sp.call(['jupyter', 'nbconvert', '--to', 'html', 'dlnd_image_classification.ipynb'])
-
-  udacity.submit(nanodegree, projects[0], filenames, 
-                 environment = args.environment,
-                 jwt_path = args.jwt_path)
+    udacity.submit(nanodegree, projects[0], filenames,
+                   environment=args.environment,
+                   jwt_path=args.jwt_path)
+    return 0
